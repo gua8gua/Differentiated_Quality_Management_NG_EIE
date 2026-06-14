@@ -1,0 +1,109 @@
+{
+  "version": 1,
+  "updated_at": "2026-06-07T11:37:10.327478+00:00",
+  "entries": [
+    {
+      "id": "secom",
+      "name": "UCI SECOM",
+      "path": "datasets/01_tabular_secom",
+      "status": "ok",
+      "bytes": 5434844,
+      "updated_at": "2026-06-07T11:22:44.945665+00:00",
+      "url": "https://archive.ics.uci.edu/dataset/179/secom",
+      "license": "Public (UCI)"
+    },
+    {
+      "id": "cwru",
+      "name": "CWRU Bearing subset",
+      "path": "datasets/02_phm_cwru",
+      "status": "ok",
+      "bytes": 9756224,
+      "updated_at": "2026-06-07T11:22:50.124138+00:00",
+      "url": "https://engineering.case.edu/bearingdatacenter",
+      "license": "Research use (CWRU)",
+      "note": "3/3 mat files"
+    },
+    {
+      "id": "iof",
+      "name": "IOF Core ontology fragment",
+      "path": "datasets/07_semantic_iof",
+      "status": "ok",
+      "bytes": 102958,
+      "updated_at": "2026-06-07T11:24:38.114607+00:00",
+      "url": "https://github.com/iofoundry/ontology",
+      "license": "Open (IOF/OAGi)"
+    },
+    {
+      "id": "mcdm",
+      "name": "Synthetic MCDM tables",
+      "path": "datasets/08_synthetic_mcdm",
+      "status": "ok",
+      "bytes": 3122,
+      "updated_at": "2026-06-07T11:24:38.115607+00:00",
+      "url": "local-generated",
+      "license": "Project internal"
+    },
+    {
+      "id": "rag_sample",
+      "name": "SAREF RAG sample (from IndustrialGraphRAG)",
+      "path": "datasets/10_text_rag_sample",
+      "status": "ok",
+      "bytes": 387871,
+      "updated_at": "2026-06-07T11:24:38.539987+00:00",
+      "url": "E:\\PyFile\\Differentiated_Quality_Management_NG_EIE\\projects\\IndustrialGraphRAG\\inputs\\saref",
+      "license": "See IndustrialGraphRAG repo"
+    },
+    {
+      "id": "mimii",
+      "name": "MIMII dev toy subset",
+      "path": "datasets/06_acoustic_mimii_toy",
+      "status": "ok",
+      "bytes": 10675533600,
+      "updated_at": "2026-06-07T11:31:41.492561+00:00",
+      "url": "https://zenodo.org/records/3384388/files/0_dB_valve.zip?download=1",
+      "license": "CC BY-SA 4.0"
+    },
+    {
+      "id": "mfg009",
+      "name": "mfg009-sample IIoT",
+      "path": "datasets/09_iiot_mfg009_sample",
+      "status": "ok",
+      "bytes": 4892760,
+      "updated_at": "2026-06-07T11:31:50.453552+00:00",
+      "url": "https://huggingface.co/datasets/xpertsystems/mfg009-sample",
+      "license": "See HF dataset card"
+    },
+    {
+      "id": "cmapss",
+      "name": "NASA C-MAPSS FD001 (via phmd)",
+      "path": "datasets/03_phm_nasa_cmapss",
+      "status": "ok",
+      "bytes": 5744640,
+      "updated_at": "2026-06-07T11:33:07.046317+00:00",
+      "url": "https://github.com/dasolma/phmd",
+      "license": "Public (NASA)"
+    },
+    {
+      "id": "hai",
+      "name": "HAI ICS (synthetic fallback)",
+      "path": "datasets/05_iot_hai",
+      "status": "ok",
+      "bytes": 847276,
+      "updated_at": "2026-06-07T11:36:07.940403+00:00",
+      "url": "local-synthetic",
+      "license": "Project internal",
+      "note": "HAI LFS unavailable: HAI sparse checkout found no csv.gz files"
+    },
+    {
+      "id": "mvtec",
+      "name": "MVTec AD bottle (synthetic fallback)",
+      "path": "datasets/04_vision_mvtec_bottle",
+      "status": "ok",
+      "bytes": 2377818,
+      "updated_at": "2026-06-07T11:37:10.185221+00:00",
+      "url": "local-synthetic",
+      "license": "Project internal (replace with CC BY-NC-SA MVTec AD)",
+      "note": "official download failed: download failed: https://www.mydrive.ch/shares/38536/3830184030e49fe74747669442f0f283/download/420938113-1629960298/mvtec_anomaly_detection.tar.xz -> HTTP Error 404: "
+    }
+  ]
+}

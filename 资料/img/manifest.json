@@ -1,0 +1,97 @@
+{
+  "source": "资料/申报书正文-西工大部分-提交.pdf",
+  "count": 18,
+  "naming": "编号_内容.jpeg（编号对应申报书图1–图18）",
+  "figures": [
+    {
+      "id": 1,
+      "file": "01_质控数据标准与治理技术路线图.jpeg",
+      "old_file": "page14_img01.jpeg"
+    },
+    {
+      "id": 2,
+      "file": "02_多变量时序列缺失补全与不确定性量化架构.jpeg",
+      "old_file": "page17_img01.jpeg"
+    },
+    {
+      "id": 3,
+      "file": "03_时空扩散多模态数据预测模型架构.jpeg",
+      "old_file": "page18_img01.jpeg"
+    },
+    {
+      "id": 4,
+      "file": "04_Lasso模糊综合质量数据评估方法.jpeg",
+      "old_file": "page20_img01.jpeg"
+    },
+    {
+      "id": 5,
+      "file": "05_智能化质量风险识别反馈响应技术路线.jpeg",
+      "old_file": "page21_img01.jpeg"
+    },
+    {
+      "id": 6,
+      "file": "06_知识图谱命名实体识别BERT-BiLSTM-CRF.jpeg",
+      "old_file": "page23_img01.jpeg"
+    },
+    {
+      "id": 7,
+      "file": "07_知识图谱关系抽取提示微调.jpeg",
+      "old_file": "page24_img01.jpeg"
+    },
+    {
+      "id": 8,
+      "file": "08_质量问题分析树结构示意图.jpeg",
+      "old_file": "page27_img01.jpeg"
+    },
+    {
+      "id": 9,
+      "file": "09_Seq2Seq自编码器少样本故障检测.jpeg",
+      "old_file": "page28_img01.jpeg"
+    },
+    {
+      "id": 10,
+      "file": "10_格拉姆角场卷积特征提取流程.jpeg",
+      "old_file": "page28_img02.jpeg"
+    },
+    {
+      "id": 11,
+      "file": "11_时序反转对比学习RUL预测.jpeg",
+      "old_file": "page29_img01.jpeg"
+    },
+    {
+      "id": 12,
+      "file": "12_装备质控领域垂类模型架构.jpeg",
+      "old_file": "page30_img01.jpeg"
+    },
+    {
+      "id": 13,
+      "file": "13_大模型潜在质量风险预测方法.jpeg",
+      "old_file": "page31_img01.jpeg"
+    },
+    {
+      "id": 14,
+      "file": "14_三类质量管控智能体协同机制.jpeg",
+      "old_file": "page32_img01.jpeg"
+    },
+    {
+      "id": 15,
+      "file": "15_整机质量管控智能体结构.jpeg",
+      "old_file": "page33_img01.jpeg"
+    },
+    {
+      "id": 16,
+      "file": "16_软件质量管控智能体结构.jpeg",
+      "old_file": "page34_img01.jpeg"
+    },
+    {
+      "id": 17,
+      "file": "17_元器件质量管控智能体结构.jpeg",
+      "old_file": "page35_img01.jpeg"
+    },
+    {
+      "id": 18,
+      "file": "18_质量管控智能决策管理平台架构.jpeg",
+      "old_file": "page37_img01.jpeg"
+    }
+  ]
+}

@@ -1,7 +1,27 @@
-# Dataset binaries (keep README + manifest)
+# Dataset binaries — keep docs + test-used subsets only
 datasets/**
 !datasets/README.md
 !datasets/manifest.json
+!datasets/目录.md
+!datasets/01_tabular_secom/
+!datasets/01_tabular_secom/**
+!datasets/03_phm_nasa_cmapss/
+!datasets/03_phm_nasa_cmapss/**
+!datasets/08_synthetic_mcdm/
+!datasets/08_synthetic_mcdm/**
+
+# Reference materials — figures only (demo + docs)
+/资料/**
+!/资料/img/
+!/资料/img/**
+
+# Utility scripts (no download temp)
+scripts/**
+!scripts/fetch_datasets.py
+!scripts/rename_figures.py
+!scripts/gen_img_readme.py
+!scripts/merge_logs.py
+scripts/.download_tmp/
 
 # Cloned reference projects (local mirror only) — keep self-developed 0_
 /projects/**
@@ -27,9 +47,6 @@ projects/0_/outputs/
 # OS
 .DS_Store
 Thumbs.db
-
-# Download temp
-scripts/.download_tmp/
 
 # Env secrets
 .env

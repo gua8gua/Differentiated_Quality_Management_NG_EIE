@@ -1,0 +1,16 @@
+indicator,ahp_weight,critic_weight,combined_weight
+correctness,0.1104,0.0746,0.0925
+completeness,0.1035,0.0783,0.0909
+timeliness,0.0348,0.0327,0.0338
+consistency,0.0508,0.1099,0.0804
+explainability,0.0996,0.1061,0.1028
+cost,0.1099,0.041,0.0755
+risk,0.045,0.0303,0.0376
+throughput,0.098,0.1084,0.1032
+defect_rate,0.0606,0.0821,0.0714
+availability,0.0355,0.113,0.0742
+latency,0.1065,0.1176,0.112
+maintainability,0.1011,0.1081,0.1046
+security,0.0225,0.0937,0.0581
+traceability,0.0532,0.1131,0.0832
+expert_score,0.1002,0.1064,0.1033
