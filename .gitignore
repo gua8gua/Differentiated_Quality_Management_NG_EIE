@@ -1,0 +1,36 @@
+# Dataset binaries (keep README + manifest)
+datasets/**
+!datasets/README.md
+!datasets/manifest.json
+
+# Cloned reference projects (local mirror only) — keep self-developed 0_
+/projects/**
+!/projects/0_/
+!/projects/0_/**
+
+# Node / frontend build
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Local runtime outputs
+projects/0_/outputs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Download temp
+scripts/.download_tmp/
+
+# Env secrets
+.env
+.env.*

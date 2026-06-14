@@ -1,0 +1,206 @@
+{
+  "generated_at": "2026-06-14T21:37:34.881339",
+  "context": {
+    "name": "SECOM",
+    "modality": "tabular",
+    "quality_object": "component",
+    "use_case": "governance",
+    "standards": [
+      "ISO8000",
+      "project_custom"
+    ],
+    "description": "",
+    "tags": [
+      "semiconductor",
+      "high_dimensional"
+    ]
+  },
+  "profile": {
+    "row_count": 1567,
+    "column_count": 590,
+    "numeric_column_count": 590,
+    "missing_rate": 0.04537548808583821,
+    "label_available": true,
+    "metadata": {}
+  },
+  "dataset_name": "SECOM",
+  "row_count": 1567,
+  "column_count": 590,
+  "missing_rate": 0.0454,
+  "anomaly_rate": 0.0804,
+  "quality_score": 93.7,
+  "metrics": [
+    {
+      "name": "完整性",
+      "value": 0.9546,
+      "weight": 0.35,
+      "description": ""
+    },
+    {
+      "name": "异常可控性",
+      "value": 0.9196,
+      "weight": 0.25,
+      "description": ""
+    },
+    {
+      "name": "可建模性",
+      "value": 1.0,
+      "weight": 0.25,
+      "description": ""
+    },
+    {
+      "name": "一致性",
+      "value": 0.82,
+      "weight": 0.15,
+      "description": "基础版本用固定示例值，后续接入规则校验"
+    }
+  ],
+  "top_features": [
+    "59",
+    "33",
+    "64",
+    "130",
+    "477",
+    "519",
+    "129",
+    "21",
+    "205",
+    "287"
+  ],
+  "stage_results": [
+    {
+      "stage": "01_profile",
+      "status": "success",
+      "summary": "完成数据资产剖析，统计行列规模、数值列数量、缺失率和高缺失字段。",
+      "metrics": {
+        "row_count": 1567,
+        "column_count": 590,
+        "numeric_column_count": 590,
+        "missing_rate": 0.04537548808583821,
+        "top_missing_columns": {
+          "157": 0.9119336311423102,
+          "292": 0.9119336311423102,
+          "293": 0.9119336311423102,
+          "158": 0.9119336311423102,
+          "492": 0.8557753669432036,
+          "358": 0.8557753669432036,
+          "85": 0.8557753669432036,
+          "220": 0.8557753669432036,
+          "246": 0.6496490108487556,
+          "109": 0.6496490108487556
+        }
+      },
+      "artifacts": []
+    },
+    {
+      "stage": "02_standardize",
+      "status": "success",
+      "summary": "完成字段命名规范化，并记录标准体系与数据对象语义。",
+      "metrics": {
+        "modality": "tabular",
+        "quality_object": "component",
+        "use_case": "governance",
+        "standards": [
+          "ISO8000",
+          "project_custom"
+        ],
+        "renamed_column_count": 0
+      },
+      "artifacts": []
+    },
+    {
+      "stage": "03_select_numeric",
+      "status": "success",
+      "summary": "完成数值型质量指标提取；非数值模态后续应接入专用特征提取适配器。",
+      "metrics": {
+        "input_column_count": 590,
+        "numeric_column_count": 590,
+        "dropped_non_numeric_count": 0
+      },
+      "artifacts": []
+    },
+    {
+      "stage": "04_impute",
+      "status": "success",
+      "summary": "完成缺失值填补，策略=median。",
+      "metrics": {
+        "missing_before": 41951,
+        "missing_after": 0,
+        "strategy": "median"
+      },
+      "artifacts": []
+    },
+    {
+      "stage": "05_normalize",
+      "status": "success",
+      "summary": "完成数值质量指标 Z-score 标准化。",
+      "metrics": {
+        "method": "z_score",
+        "column_count": 590
+      },
+      "artifacts": []
+    },
+    {
+      "stage": "06_anomaly_detection",
+      "status": "success",
+      "summary": "完成 IsolationForest 基础异常检测。",
+      "metrics": {
+        "method": "IsolationForest",
+        "contamination": 0.08,
+        "abnormal_sample_count": 126,
+        "anomaly_rate": 0.08040842373962986
+      },
+      "artifacts": []
+    },
+    {
+      "stage": "07_feature_selection",
+      "status": "success",
+      "summary": "完成关键质量特征筛选，方法=random_forest_importance。",
+      "metrics": {
+        "method": "random_forest_importance",
+        "selected_count": 10,
+        "top_features": [
+          "59",
+          "33",
+          "64",
+          "130",
+          "477",
+          "519",
+          "129",
+          "21",
+          "205",
+          "287"
+        ]
+      },
+      "artifacts": []
+    },
+    {
+      "stage": "08_quality_evaluation",
+      "status": "success",
+      "summary": "完成综合质量评分，当前为可扩展的基础加权模型。",
+      "metrics": {
+        "quality_score": 93.7,
+        "metric_count": 4,
+        "method": "weighted_quality_score"
+      },
+      "artifacts": []
+    },
+    {
+      "stage": "09_reporting",
+      "status": "success",
+      "summary": "完成治理报告与风险摘要 JSON 输出。",
+      "metrics": {
+        "file_count": 3
+      },
+      "artifacts": [
+        "e:\\PyFile\\Differentiated_Quality_Management_NG_EIE\\projects\\0_\\dqm-data-lab\\reports_stage_smoke\\data_quality_report.json",
+        "e:\\PyFile\\Differentiated_Quality_Management_NG_EIE\\projects\\0_\\dqm-data-lab\\reports_stage_smoke\\risk_summary.json",
+        "e:\\PyFile\\Differentiated_Quality_Management_NG_EIE\\projects\\0_\\dqm-data-lab\\reports_stage_smoke\\data_quality_report.pretty.json"
+      ]
+    }
+  ],
+  "notes": [
+    "基础版本完成中位数填充、Z-score标准化、IsolationForest异常检测。",
+    "已通过 secom 适配器接入，模态=tabular，对象=component，用途=governance。"
+  ]
+}

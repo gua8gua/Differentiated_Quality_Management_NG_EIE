@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+python-multipart
+httpx
+langgraph
+langchain-core
+langchain-openai
+sse-starlette
+numpy
+pandas
+scikit-learn
+pydantic

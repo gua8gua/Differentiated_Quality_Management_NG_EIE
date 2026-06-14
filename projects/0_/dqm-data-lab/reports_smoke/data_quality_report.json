@@ -1,0 +1,74 @@
+{
+  "generated_at": "2026-06-14T21:30:46.837168",
+  "context": {
+    "name": "SECOM",
+    "modality": "tabular",
+    "quality_object": "component",
+    "use_case": "governance",
+    "standards": [
+      "ISO8000",
+      "project_custom"
+    ],
+    "description": "",
+    "tags": [
+      "semiconductor",
+      "high_dimensional"
+    ]
+  },
+  "profile": {
+    "row_count": 1567,
+    "column_count": 590,
+    "numeric_column_count": 590,
+    "missing_rate": 0.04537548808583821,
+    "label_available": true,
+    "metadata": {}
+  },
+  "dataset_name": "SECOM",
+  "row_count": 1567,
+  "column_count": 590,
+  "missing_rate": 0.0454,
+  "anomaly_rate": 0.0804,
+  "quality_score": 95.14,
+  "metrics": [
+    {
+      "name": "完整性",
+      "value": 0.9546,
+      "weight": 0.35,
+      "description": ""
+    },
+    {
+      "name": "异常可控性",
+      "value": 0.9196,
+      "weight": 0.25,
+      "description": ""
+    },
+    {
+      "name": "可建模性",
+      "value": 1.0,
+      "weight": 0.25,
+      "description": ""
+    },
+    {
+      "name": "一致性",
+      "value": 0.82,
+      "weight": 0.15,
+      "description": "基础版本用固定示例值，后续接入规则校验"
+    }
+  ],
+  "top_features": [
+    "59",
+    "33",
+    "64",
+    "130",
+    "477",
+    "519",
+    "129",
+    "21",
+    "205",
+    "287"
+  ],
+  "notes": [
+    "基础版本完成中位数填充、Z-score标准化、IsolationForest异常检测。",
+    "已通过 secom 适配器接入，模态=tabular，对象=component，用途=governance。"
+  ]
+}

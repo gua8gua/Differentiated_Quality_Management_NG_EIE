@@ -1,0 +1,50 @@
+{
+  "generated_at": "2026-06-14T21:30:46.837168",
+  "context": {
+    "name": "SECOM",
+    "modality": "tabular",
+    "quality_object": "component",
+    "use_case": "governance",
+    "standards": [
+      "ISO8000",
+      "project_custom"
+    ],
+    "description": "",
+    "tags": [
+      "semiconductor",
+      "high_dimensional"
+    ]
+  },
+  "dataset_name": "SECOM",
+  "risk_level": "中",
+  "abnormal_sample_count": 126,
+  "abnormal_rate": 0.0804,
+  "evidence": [
+    {
+      "type": "top_feature",
+      "name": "59",
+      "description": "随机森林/方差筛选得到的关键质量特征"
+    },
+    {
+      "type": "top_feature",
+      "name": "33",
+      "description": "随机森林/方差筛选得到的关键质量特征"
+    },
+    {
+      "type": "top_feature",
+      "name": "64",
+      "description": "随机森林/方差筛选得到的关键质量特征"
+    },
+    {
+      "type": "top_feature",
+      "name": "130",
+      "description": "随机森林/方差筛选得到的关键质量特征"
+    },
+    {
+      "type": "top_feature",
+      "name": "477",
+      "description": "随机森林/方差筛选得到的关键质量特征"
+    }
+  ],
+  "recommended_next_step": "将异常样本和关键特征提交给 dqm-kg-rag 做图谱追溯与解释。"
+}

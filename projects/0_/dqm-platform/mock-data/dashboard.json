@@ -1,0 +1,224 @@
+{
+  "overview": {
+    "title": "新一代电子信息装备差异化质量管控",
+    "subtitle": "SECOM 元器件/制造过程质量数据全流程分析样例",
+    "objects": [
+      "基础元器件",
+      "制造过程",
+      "质量指标"
+    ],
+    "coreWorks": [
+      "质量数据可信治理与评价",
+      "质控知识图谱与差异化根因追溯",
+      "质量风险预测与三类智能体协同管控"
+    ]
+  },
+  "dataQuality": {
+    "dataset": "SECOM",
+    "qualityScore": 93.7,
+    "missingRate": 0.0454,
+    "anomalyRate": 0.0804,
+    "topFeatures": [
+      "59",
+      "33",
+      "64",
+      "130",
+      "477"
+    ]
+  },
+  "riskPrediction": {
+    "riskLevel": "中",
+    "phenomenon": "异常特征59",
+    "classification": {
+      "model": "RandomForestClassifier",
+      "accuracy": 0.9337,
+      "precision": 0.8717,
+      "recall": 0.9337,
+      "f1": 0.9016,
+      "confusion_matrix": [
+        [
+          366,
+          0
+        ],
+        [
+          26,
+          0
+        ]
+      ],
+      "test_size": 392
+    },
+    "trend": {
+      "method": "rolling_mean_trend",
+      "feature": "59",
+      "start": -0.4919,
+      "end": -0.1514,
+      "delta": 0.3405
+    },
+    "dtwSimilarSegments": [
+      {
+        "caseId": "window-001",
+        "similarity": 0.0442,
+        "label": "相似工艺片段"
+      },
+      {
+        "caseId": "window-002",
+        "similarity": 0.0429,
+        "label": "相似工艺片段"
+      },
+      {
+        "caseId": "window-004",
+        "similarity": 0.0423,
+        "label": "相似工艺片段"
+      }
+    ],
+    "rul": [
+      {
+        "cycle": 1,
+        "value": 205.31
+      },
+      {
+        "cycle": 2,
+        "value": 204.31
+      },
+      {
+        "cycle": 3,
+        "value": 203.31
+      },
+      {
+        "cycle": 4,
+        "value": 202.31
+      },
+      {
+        "cycle": 5,
+        "value": 201.31
+      },
+      {
+        "cycle": 6,
+        "value": 200.31
+      },
+      {
+        "cycle": 7,
+        "value": 199.31
+      },
+      {
+        "cycle": 8,
+        "value": 198.31
+      }
+    ]
+  },
+  "graphTrace": {
+    "phenomenon": "异常特征59",
+    "paths": [
+      [
+        "异常特征59",
+        "制造过程波动"
+      ],
+      [
+        "异常特征59",
+        "制造过程波动",
+        "复核工艺参数"
+      ]
+    ],
+    "summary": "当前风险等级为中。系统基于59：随机森林/方差筛选得到的关键质量特征；33：随机森林/方差筛选得到的关键质量特征；64：随机森林/方差筛选得到的关键质量特征；130：随机森林/方差筛选得到的关键质量特征；477：随机森林/方差筛选得到的关键质量特征进行追溯，建议优先执行：复核工艺参数。"
+  },
+  "workflow": [
+    {
+      "stage": "01_data_governance",
+      "project": "dqm-data-lab",
+      "output": "data_quality_report.json"
+    },
+    {
+      "stage": "02_risk_summary",
+      "project": "dqm-data-lab",
+      "output": "risk_summary.json"
+    },
+    {
+      "stage": "03_kg_workflow",
+      "project": "dqm-kg-rag",
+      "output": "kg_workflow.json"
+    },
+    {
+      "stage": "04_agent_disposal",
+      "project": "dqm-platform",
+      "output": "disposalReport / agentDecisions"
+    },
+    {
+      "stage": "05_feedback",
+      "project": "dqm-platform",
+      "output": "feedbackEvaluation"
+    },
+    {
+      "stage": "06_dashboard_sync",
+      "project": "dqm-platform",
+      "output": "mock-data/dashboard.json"
+    }
+  ],
+  "agents": [
+    {
+      "name": "整机质量管控智能体",
+      "code": "PRL",
+      "input": "质量评分、风险等级、下级元器件风险",
+      "output": "全局质量状态与处置优先级",
+      "recommendation": "当前为制造过程样例，整机侧建议关注批次风险对整机可靠性的传导。"
+    },
+    {
+      "name": "软件质量管控智能体",
+      "code": "FCT",
+      "input": "质量事件、接口日志、版本信息",
+      "output": "软件侧关联风险与回归测试建议",
+      "recommendation": "本样例未触发软件侧根因，可保持监测并等待软件质量数据接入。"
+    },
+    {
+      "name": "元器件质量管控智能体",
+      "code": "PFP",
+      "input": "SECOM关键特征、异常率、图谱处置路径",
+      "output": "元器件/制造过程风险与筛查建议",
+      "recommendation": "优先复核工艺参数、设备状态和批次一致性。"
+    }
+  ],
+  "agentDecisions": [
+    {
+      "agent": "整机质量管控智能体",
+      "judgment": "当前风险来自元器件/制造过程侧，可能向整机可靠性传导。",
+      "recommendation": "维持运行但提升相关批次监测频率。",
+      "confidence": 0.72
+    },
+    {
+      "agent": "软件质量管控智能体",
+      "judgment": "本轮证据未指向软件接口或版本变更根因。",
+      "recommendation": "保持日志监测，暂不触发版本回退。",
+      "confidence": 0.64
+    },
+    {
+      "agent": "元器件质量管控智能体",
+      "judgment": "异常率 0.0804，图谱建议执行：复核工艺参数。",
+      "recommendation": "复核工艺参数",
+      "confidence": 0.86
+    }
+  ],
+  "disposalReport": {
+    "phenomenon": "异常特征59",
+    "riskLevel": "中",
+    "evidenceChain": [
+      "59：随机森林/方差筛选得到的关键质量特征",
+      "33：随机森林/方差筛选得到的关键质量特征",
+      "64：随机森林/方差筛选得到的关键质量特征",
+      "130：随机森林/方差筛选得到的关键质量特征",
+      "477：随机森林/方差筛选得到的关键质量特征"
+    ],
+    "rootCausePath": [
+      "异常特征59",
+      "制造过程波动",
+      "复核工艺参数"
+    ],
+    "recommendation": "复核工艺参数",
+    "responsibleObject": "元器件/制造过程"
+  },
+  "feedbackEvaluation": {
+    "timeliness": 0.86,
+    "effectiveness": 0.82,
+    "completeness": 0.78,
+    "recurrenceRisk": "中",
+    "summary": "已形成从异常特征、图谱根因到处置建议的闭环；后续需接入真实处置结果以校准复发风险。"
+  }
+}
